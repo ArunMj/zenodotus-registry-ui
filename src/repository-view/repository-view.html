@@ -1,0 +1,44 @@
+<!-- <link rel="import" href="../imports.html"> -->
+
+<dom-module id="repository-view">
+  <template>
+    <style>
+       :host {
+        display: block;
+      }
+
+      .app-icon {
+        margin-right: 10px;
+      }
+    </style>
+
+    <paper-material role="listbox">
+      <template is="dom-repeat" items={{repoNames}}>
+          <paper-material>
+              <paper-item>{{item}}</paper-item>
+          </paper-material>
+
+      </template>
+    </paper-material>
+    <iron-ajax auto url="/api/repository" handle-as="json" on-response="handleApiListResponse" last-response="{{repoNames}}">
+    </iron-ajax>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'repository-view',
+
+      properties: {
+        test: {
+          type: String,
+          value: ["a", "bbb", "cccccc"]
+        },
+      },
+      handleApiListResponse: (ev) => {
+        console.log("hndl", ev)
+      }
+
+    });
+  </script>
+</dom-module>
