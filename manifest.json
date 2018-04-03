@@ -1,7 +1,0 @@
-{
-  "name": "zenodotus-registry-ui",
-  "short_name": "zenodotus-registry-ui",
-  "description": "docker regstry ui",
-  "start_url": "/",
-  "display": "standalone"
-}
