@@ -8,6 +8,12 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo"
+
+	// "github.com/heroku/docker-registry-client/registry"
+	"github.com/rusenask/docker-registry-client/registry"
+	// "github.com/docker/distribution/digest"
+	// "github.com/docker/distribution/manifest"
+	// "github.com/docker/libtrust"
 )
 
 func main() {
@@ -20,6 +26,13 @@ func main() {
 	e.GET("/api/repository", getRepositoryListHndl)
 	e.GET("/api/repository/details", getRepoDetails)
 	e.Static("/", ".")
+
+	url := "http://localhost:5000"
+	username := "" // anonymous
+	password := "" // anonymous
+	hub, _ := registry.New(url, username, password)
+
+	fmt.Println(hub.Repositories())
 	e.Logger.Fatal(e.Start(":8080"))
 }
 
