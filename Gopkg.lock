@@ -2,10 +2,25 @@
 
 
 [[projects]]
+  branch = "master"
+  name = "github.com/GeertJohan/go.rice"
+  packages = [
+    ".",
+    "embedded"
+  ]
+  revision = "c02ca9a983da5807ddf7d796784928f5be4afd09"
+
+[[projects]]
   name = "github.com/Sirupsen/logrus"
   packages = ["."]
   revision = "c155da19408a8799da419ed3eeb0cb5db0ad5dbc"
   version = "v1.0.5"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/daaku/go.zipexe"
+  packages = ["."]
+  revision = "a5fe2436ffcb3236e175e5149162b41cd28bd27d"
 
 [[projects]]
   name = "github.com/docker/distribution"
@@ -39,6 +54,12 @@
   packages = ["."]
   revision = "53c1911da2b537f792e7cafcb446b05ffe33b996"
   version = "v1.6.1"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/kardianos/osext"
+  packages = ["."]
+  revision = "ae77be60afb1dcacde03767a8c37337fad28ac14"
 
 [[projects]]
   name = "github.com/labstack/echo"
@@ -119,6 +140,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "2df9595611ad6b237842e531b4643ae5c22cc4d62d93b35e4034a4d2ff20739e"
+  inputs-digest = "501703a89bdf80aa3f73a01726f7c3a62ef7dea9ac30d7547a07f37ffeb57736"
   solver-name = "gps-cdcl"
   solver-version = 1
