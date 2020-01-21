@@ -27,7 +27,11 @@
 
 [[constraint]]
   name = "github.com/labstack/echo"
-  version = "3.3.4"
+  version = "3.3.6"
+
+[[constraint]]
+  name = "github.com/heroku/docker-registry-client"
+  branch = "master"
 
 [prune]
   go-tests = true

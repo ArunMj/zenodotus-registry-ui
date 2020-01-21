@@ -14,14 +14,21 @@ export class RepositoryList extends React.Component {
     }
 
     componentDidMount() {
-        console.log('fuck!!!');
-        fetch('http://localhost:8080/api/repositories').then(
+        fetch('http://localhost:8008/api/repositories').then(
             res => {
-                res.json().then(j => {
+                res.json().then(
+                    j => {
                     console.log(j);
                     this.setState({ list: j });
 
-                });
+                   },
+                    err => {
+                    console.error(err);
+                  });
+            },
+            err => {
+                console.error(err);
+                
             }
         );
     }
